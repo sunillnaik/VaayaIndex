@@ -4,116 +4,205 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vaaya | Banjara Community Matrimony</title>
-  <meta name="description" content="Vaaya is a community-focused matrimonial service for the Banjara community in India. We help families connect for culturally aligned marriages.">
+  <meta name="description" content="Vaaya is a community-focused matrimonial service for the Banjara community in India.">
+
   <style>
+    :root {
+      --primary: #7b2cbf;
+      --secondary: #f8f0fc;
+      --accent: #ff9f1c;
+      --text-dark: #222;
+      --text-light: #555;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f8f9fa;
-      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--secondary);
+      color: var(--text-dark);
       line-height: 1.6;
     }
+
     header {
-      background: #ffffff;
-      padding: 40px 20px;
-      text-align: center;
-      border-bottom: 1px solid #ddd;
-    }
-    h1 {
-      margin: 0;
-      font-size: 32px;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
       background: white;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #eee;
     }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo svg {
+      width: 40px;
+      height: 40px;
+    }
+
+    .logo-text {
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--primary);
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: var(--text-light);
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #7b2cbf, #9d4edd);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-top: 0;
+    }
+
     footer {
       text-align: center;
-      padding: 20px;
-      background: #ffffff;
-      border-top: 1px solid #ddd;
+      padding: 30px;
+      background: white;
+      border-top: 1px solid #eee;
       font-size: 14px;
+      color: var(--text-light);
     }
-    a {
-      color: #0070f3;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    section {
-      margin-bottom: 40px;
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 28px;
+      }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Vaaya</h1>
-  <p>Community-Focused Matrimony for the Banjara Community</p>
+  <div class="logo">
+    <!-- Simple SVG Logo -->
+    <svg viewBox="0 0 100 100" fill="none">
+      <circle cx="50" cy="50" r="45" fill="#7b2cbf"/>
+      <text x="50%" y="55%" text-anchor="middle" fill="white" font-size="40" font-family="Arial" dy=".3em">V</text>
+    </svg>
+    <div class="logo-text">Vaaya</div>
+  </div>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#privacy">Privacy</a>
+    <a href="#terms">Terms</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
+
+<section class="hero">
+  <h1>Community-Focused Matrimony for the Banjara Community</h1>
+  <p>
+    Vaaya is a private matrimonial service dedicated to helping Banjara families 
+    connect for culturally aligned and meaningful marriages.
+  </p>
+</section>
 
 <div class="container">
 
-  <section>
+  <div class="card" id="about">
     <h2>About Vaaya</h2>
     <p>
-      Vaaya is a private matrimonial service created exclusively for the Banjara community in India.
-      Our goal is to help families and individuals connect for meaningful, culturally aligned marriages.
+      Vaaya is built exclusively for the Banjara community in India.
+      Our mission is to provide a respectful and structured platform
+      for marriage introductions within the community.
     </p>
     <p>
-      Communication with registered users may take place through the WhatsApp Business API,
+      Communication with registered users may take place via the WhatsApp Business API,
       based on user consent and opt-in.
     </p>
-  </section>
+  </div>
 
-  <section>
+  <div class="card" id="privacy">
+    <h2>Privacy Policy</h2>
+    <p>
+      We collect basic user information such as name, age, location, and preferences
+      strictly for matrimonial matchmaking purposes.
+    </p>
+    <p>
+      We do not sell or share personal data with third parties.
+      Users may request account deletion by emailing support@vaaya.me.
+    </p>
+    <p>
+      We implement reasonable security measures to protect user data.
+    </p>
+  </div>
+
+  <div class="card" id="terms">
+    <h2>Terms of Service</h2>
+    <p>
+      Vaaya is intended for individuals aged 18 years and above.
+      The service is strictly for matrimonial and marriage introduction purposes.
+    </p>
+    <p>
+      Users must provide accurate information. Vaaya reserves the right
+      to remove fake or misleading profiles.
+    </p>
+    <p>
+      Vaaya does not guarantee match outcomes.
+      All services are governed under the laws of India.
+    </p>
+  </div>
+
+  <div class="card" id="contact">
     <h2>Contact Information</h2>
     <p><strong>Business Name:</strong> Vaaya</p>
     <p><strong>Location:</strong> Bangalore, Karnataka, India</p>
     <p><strong>Email:</strong> support@vaaya.me</p>
     <p><strong>Phone:</strong> +91 8618735358</p>
-  </section>
-
-  <section>
-    <h2>Privacy Policy</h2>
-    <p>
-      Vaaya collects basic user information such as name, age, location, marital status,
-      and preferences for the purpose of providing matrimonial matchmaking services.
-    </p>
-    <p>
-      We may use the WhatsApp Business API to communicate important updates and profile matches
-      to users who have opted in to receive messages.
-    </p>
-    <p>
-      We do not sell or share personal data with third parties for marketing purposes.
-      Users may request data deletion by contacting us at support@vaaya.me.
-    </p>
-  </section>
-
-  <section>
-    <h2>Terms of Service</h2>
-    <p>
-      Vaaya is a matrimonial platform intended for individuals aged 18 years and above.
-      The service is strictly for marriage introductions and community matchmaking purposes.
-    </p>
-    <p>
-      Users must provide accurate information. Vaaya reserves the right to remove
-      fake, misleading, or inappropriate profiles.
-    </p>
-    <p>
-      Vaaya does not guarantee marriage or match outcomes.
-      All disputes are governed under the laws of India.
-    </p>
-  </section>
+  </div>
 
 </div>
 
 <footer>
-  <p>© 2026 Vaaya. All rights reserved.</p>
+  © 2026 Vaaya. All rights reserved.
 </footer>
 
 </body>
